@@ -10,11 +10,15 @@ app.get("/", (req, res) => {
 });
 
 app.get("/chocolate", (req, res) => {
-    res.send("Mmm chocolate is great, mf");
+    let bars = req.query.search; // In this case the search param will be "bars" (the word at the end of req.search.<queryParamName>)
+    res.send(`Mmm chocolate is great, mf! And I want ${bars} bars of chocolate`);
 });
 
 app.get("/node", (req, res) => {
-    res.send("This is the node endpoint");
+    let val1 = req.query.value1;
+    let val2 = req.query.value2;
+    const result = val1 * val2; 
+    res.send("In the node endpoint the multiply from " + val1 + " and " + val2 + " is " + result);
 });
 
 app.get("/codeyourfuture", (req, res) => {
