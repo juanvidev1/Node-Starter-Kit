@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/chocolate", (req, res) => {
-    let bars = req.query.search; // In this case the search param will be "bars" (the word at the end of req.search.<queryParamName>)
+    let bars = req.query.bars; // In this case the search param will be "bars" (the word at the end of req.search.<queryParamName>)
     res.send(`Mmm chocolate is great, mf! And I want ${bars} bars of chocolate`);
 });
 
